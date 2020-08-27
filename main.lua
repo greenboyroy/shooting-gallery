@@ -2,8 +2,8 @@
     Shooting Gallery
     by greenboyroy
 
-    v0.1
-    "The First Commit"
+    v0.1.1
+    "The First Cleanup"
 
     -- Main Program --
 
@@ -46,11 +46,3 @@ function love.load()
     gridX = {106, 318, 530, 742, 954, 1166}
     gridY = {110, 330, 550}
 end
-
--- function love.update(dt)
---     -- not needed?
--- end
-
--- function love.draw()
---     -- not needed?
--- end

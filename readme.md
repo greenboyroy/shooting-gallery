@@ -8,6 +8,10 @@ Currently using [Kenney assets](https://www.kenney.nl/assets), with thanks.
 
 ## Changelog
 
+### v0.1.1
++ Cleaning up some comments
++ Refactoring some hit code
+
 ### v0.1
 + Menu and game states
 + Crosshairs

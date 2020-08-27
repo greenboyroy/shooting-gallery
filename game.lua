@@ -6,16 +6,14 @@ function game:init()
     gameFont = love.graphics.newFont(48)
 
     target = Target:new()
-    -- target:Spawn()
 end
 
 function game:enter(previous)
-    print(previous)
 end
 
 function game:update(dt)
     target:update(dt)
-    -- if score is levels.score and levels.reached then target:speedUp()
+    -- TODO: if score is levels.score and levels.reached then target:speedUp()
 end
 
 function game:draw()
@@ -32,13 +30,11 @@ end
 
 function love.mousepressed(x, y, btn, istouch)
     if Gamestate.current() == game and btn == 1 then
-        -- temp
+        -- TEMP
         -- target:speedUp()
         dist = distanceBetween(x, y, target:getX(), target:getY())
         if dist < target:getSize() then
-            print(target:getValue(math.ceil(dist / 14)))
-            -- TODO: add to score
-            target:hit()
+            target:hit(math.ceil(dist / 14))
         else
             print("Missed shot")
         end

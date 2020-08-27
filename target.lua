@@ -37,10 +37,10 @@ function Target:spawn()
     self.timer:after(self.life, function() self:miss() end)
 end
 
-function Target:hit()
+function Target:hit(ring)
     self.state = "hit"
     self.timer:clear()
-    -- add X to score
+    -- TODO: add self.values[ring] to score
 end
 
 function Target:miss()
@@ -66,9 +66,4 @@ function Target:getSize()
     return self.size
 end
 
-function Target:getValue(ring)
-    return self.values[ring]
-end
-
 -- self.img... image file to use (different values = different image)
--- 
